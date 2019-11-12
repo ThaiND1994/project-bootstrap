@@ -1,0 +1,11 @@
+.container-fluid .row .headerInfo .navbar{
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Yeon Sung', cursive;
+}
+a.nav-link{
+    color: black;
+}
+li.nav-item{
+    color: black;
+}
