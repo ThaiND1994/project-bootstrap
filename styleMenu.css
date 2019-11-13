@@ -1,0 +1,8 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+/* .dropdownUL li{
+    display: flex;
+} */
