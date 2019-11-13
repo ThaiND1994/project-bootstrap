@@ -1,0 +1,155 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+.Header{
+    text-align: center;
+    height: auto;
+    background-image: url('./img-1.png');
+    /* width: 100%;
+    height: auto; */
+    background-size: cover;
+    background-position: center;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.Header.row{
+    background-image: url('./img-1');
+}
+.titleHeader{
+    font-family: 'Gugi', cursive;
+    color: white;
+}
+.titleHeader h1{
+    padding: 8px;
+    font-size: 0.8rem;
+    margin: 0px;
+}
+.banner{
+    box-sizing: border-box;
+}
+.banner img{
+    background-color: transparent;
+    padding: 8px;
+    width: 5em;
+    height:5em;
+    
+}
+.titleHeader2{
+    padding: 8px;
+}
+.icon {
+    margin: 10px;
+    color:#ddd;
+}
+.titleHeader2 a:hover{
+    color: white;
+    text-decoration: none;
+}
+.Header .titleHeader2 .infoHeader span{
+    border: 1px solid white;
+    padding: 3px 8px;
+    border-radius: 30px;
+    text-align: center;
+}
+.banner2{
+    box-sizing: border-box;
+    color: #ffffff;
+}
+.banner2 .ul-imgHeader{
+    margin: 0.4em 0.4em;
+    padding: 0 ;
+}
+.banner2 .ul-imgHeader .fab{
+    padding: 0 ;
+    margin: 0 0.5em;
+    color: white;
+}
+.banner2 .info{
+    color: white;
+    border: 1px solid white ;
+    margin: 0 0.4em;
+    padding: 0 0.5em;
+    border-radius: 5em;
+    box-sizing: border-box;
+}
+.banner2 .info::after,.banner2 .info::before{
+    box-sizing: border-box;
+}
+.banner2 .info:hover{
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid transparent;
+    transition: 0.9s ease;
+}
+.container-fluid .info{
+    margin: 0.5em 0.5em;
+}
+/* responsive */
+@media (min-width: 576px) { 
+    .titleHeader h1{
+        font-size: 1.2rem;
+        margin: 0px;
+    }
+ }
+@media (min-width: 992px) { 
+    .titleHeader h1{
+        font-size: 1.5rem;
+        margin: 0px;
+    }
+ }
+@media (min-width: 1200px) { 
+    .titleHeader h1{
+        font-size: 2.5rem;
+        margin: 0px;
+    }
+    
+ }
+ @media(max-width:1200px){
+     .banner2{
+         display: none;
+     }
+     .banner img{
+        background-color: transparent;
+        padding: 8px;
+        width: 7em;
+        height:7em;
+    }
+    .Header{
+        background-color: black;
+        background-image: none;
+    }
+ }
+ @media(max-width:992px){
+    .banner2{
+        display: none;
+    }
+    .banner img{
+       background-color: transparent;
+       padding: 6px;
+       width: 6em;
+       height:6em;
+   }
+   .Header{
+       background-color: black;
+       background-image: none;
+   }
+}
+@media(max-width:567px){
+    .banner2{
+        display: none;
+    }
+    .banner img{
+       background-color: transparent;
+       padding: 4px;
+       width: 5em;
+       height:5em;
+   }
+   .Header{
+       background-color: black;
+       background-image: none;
+   }
+}
+
+ 
