@@ -25,7 +25,7 @@ position: relative;
     border: 0.5px solid #eeeeee;
     background:white;
     /* width: 150px; */
-    box-shadow:  -0.2em 0.2em 0.1em 0.1em #dddddd;
+    box-shadow:  -0.2em 0.2em 0.1em 0.01em #dddddd;
 }
 .menu .menu-li:hover .submenu
 {
@@ -36,6 +36,7 @@ position: relative;
     font-size: 0.9em;
     padding: 0.8em;
 }
+
 /* @media(max-width:576px){
     .menu li{
         margin:0 0.5em; 

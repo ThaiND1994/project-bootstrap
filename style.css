@@ -92,6 +92,29 @@
 .container-fluid .info{
     margin: 0.5em 0.5em;
 }
+/* Menu */
+.menu{
+    width: auto;
+    padding: 0;
+}
+  /* dropdown */
+  .dropdownMenu{
+      font-size: 1.1em;
+      font-weight: bold;
+  }
+  .myButton{
+    color:black;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    padding:0.3em 0.6em;
+    border-radius: 5px;
+}
+.myButton:hover{
+    border: 1px solid transparent;
+    background-color:light;
+    color:black;
+    transition: 1s ease;
+}
 /* responsive */
 @media (min-width: 576px) { 
     .titleHeader h1{
@@ -157,5 +180,6 @@
        background-image: none;
    }
 }
+
 
  
