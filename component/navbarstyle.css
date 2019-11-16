@@ -42,6 +42,39 @@ header nav ul{
 }
 header nav ul li{
     list-style-type: none;
+    position: relative;
+}
+header nav ul li.sub-menu:before
+{
+    position: absolute;
+    content: '\f0d7';
+    font-family: 'fontAwesome';
+    line-height: 65px;
+    right: 5px;
+}
+header nav ul li.active.sub-menu:before
+{
+    content: '\f0d8';
+    font-family: 'fontAwesome';
+}
+header nav ul li ul{
+    list-style: none;
+    /* border-top: 1px solid green; */
+    /* margin-top: 1px; */
+    width: 150px;
+    position:absolute;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0,.2);
+}
+/* header nav ul li.active{
+    border-bottom: 2px solid green;
+} */
+header nav ul li.active ul{
+    display: block;
+}
+header nav ul li ul li{
+    display: block;
 }
 header nav ul li a{
     display: block;
@@ -85,7 +118,7 @@ header nav ul li a.active,nav ul li a:hover{
         height: calc(100vh-50px);
         top: 60px;
         left: -100%;
-        margin: 1px auto;
+        margin: 2px auto;
         /* padding: 0 20px; */
         background-color: #ffffff;
         /* box-sizing: border-box;
@@ -100,24 +133,23 @@ header nav ul li a.active,nav ul li a:hover{
         display: block;
         text-align: center;
     }
+    header nav ul li a{
+        margin:0;
+    }
     header nav.active ul li a{
         border-bottom: 1px solid rgba(0, 0, 0,.2);
     }
-}
-/* @media(max-width:1200px){
-    header{
-        margin:20px
+    header nav ul li.sub-menu:before{
+        line-height: 45px;
+    }
+    header nav ul li.active ul{
+        display:block;
+        position:relative;
+        left: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+    header nav ul li ul{
+        left: -100%;
     }
 }
-@media(max-width:768px)
-{
-    
-    .menu-toggle::before{
-        content: '\f0c9';
-        font-family: 'fontAwesome';
-        line-height: 40px;
-    }
-    nav ul{
-        display: none;
-    }
-} */
