@@ -1,7 +1,10 @@
 *,*::after,*::before{
     box-sizing: border-box;
 }
-
+body{
+    margin: 0;
+    padding: 0;
+}
 .Header{
     text-align: center;
     height: auto;
@@ -92,28 +95,155 @@
 .container-fluid .info{
     margin: 0.5em 0.5em;
 }
-/* Menu */
-.menu{
-    width: auto;
-    padding: 0;
-}
   /* dropdown */
-  .dropdownMenu{
-      font-size: 1.1em;
-      font-weight: bold;
-  }
-  .myButton{
-    color:black;
-    border: 1px solid #ddd;
-    background-color: transparent;
-    padding:0.3em 0.6em;
-    border-radius: 5px;
+main .dropdownMenu{
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0,.2);
+
 }
-.myButton:hover{
-    border: 1px solid transparent;
-    background-color:light;
-    color:black;
-    transition: 1s ease;
+.droptitle{
+    color: #069370;
+    height: 50px;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+    float: left; 
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold; 
+}
+main .dropdownMenu .droptitle:hover{
+    text-decoration: none;
+    color:#0008ff;
+}
+main .dropdownMenu nav{
+float: right;
+}
+.clear-fix{
+    clear: both;
+}
+main .dropdownMenu nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+main .dropdownMenu nav ul li{
+    list-style-type: none;
+    position: relative;
+}
+main .dropdownMenu nav ul li.sub-menu:before
+{
+    position: absolute;
+    content: '\f0d7';
+    font-family: 'fontAwesome';
+    line-height: 65px;
+    right: 5px;
+}
+main .dropdownMenu nav ul li.active.sub-menu:before
+{
+    content: '\f0d8';
+    font-family: 'fontAwesome';
+}
+main .dropdownMenu nav ul li ul{
+    list-style: none;
+    width: 200px;
+    position:absolute;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0,.2);
+}
+main .dropdownMenu  nav ul li.active ul{
+    display: block;
+    margin: 1px;
+}
+main .dropdownMenu  nav ul li ul li{
+    display: block;
+}
+main .dropdownMenu  nav ul li a{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+}
+main .dropdownMenu  nav ul li:hover  a{
+    text-decoration: none;
+}
+main .dropdownMenu  nav ul li a.active, main .dropdownMenu nav ul li a:hover{
+    background: #069370;
+    color: #fff;
+    transition: 0.9s ease;
+}
+.menu-toggle{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #cccccc;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: #069370;
+}
+
+/* container-menu */
+.container-menu{
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0,.2);
+}
+.container-menu .main-menu{
+    padding: 5px 10px;
+    margin: 10px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: content-box;
+}
+.container-menu .main-menu span{
+    font-size: 25px;
+}
+.container-menu .main-menu a{
+    color:#069370;
+    font-weight: bold;
+    font-size: 15px;
+}
+.container-menu .main-menu a:hover{
+    text-decoration: none;
+    color: #0008ff;
+}
+.container-menu .main-menu2{
+    padding: 5px 10px;
+    margin: 10px 0px;
+    overflow-x: auto;
+}
+.container-menu .main-menu2 ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.container-menu .main-menu2 ul a{
+    position: relative;
+}
+.container-menu .main-menu2 ul .image{
+    position: relative;
+    width:310px;
+    height:auto;
+}
+.container-menu .main-menu2 ul .banner{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    left: 75%;
 }
 /* responsive */
 @media (min-width: 576px) { 
@@ -132,10 +262,10 @@
     .titleHeader h1{
         font-size: 2.5rem;
         margin: 0px;
-    }
-    
+    }  
  }
  @media(max-width:1200px){
+
      .banner2{
          display: none;
      }
@@ -148,6 +278,53 @@
     .Header{
         background-color: black;
         background-image: none;
+    }
+    main .dropdownMenu {
+        padding: 0 20px;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    main .dropdownMenu  nav{
+        /* display: none; */
+        position: absolute;
+        width: 100%;
+        height: calc(100vh-50px);
+        top: 60px;
+        left: -200%;
+        margin: 2px auto;
+        /* padding: 0 20px; */
+        background-color: #ffffff;
+        /* box-sizing: border-box;
+        border-radius: 4px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0,.2); */
+        transition: 0.5s;
+    }
+    main .dropdownMenu  nav.active{
+        left:0;
+    }
+    main .dropdownMenu  nav.active ul{
+        display: block;
+        text-align: center;
+    }
+    main .dropdownMenu  nav ul li a{
+        margin:0;
+    }
+    main .dropdownMenu  nav.active ul li a{
+        border-bottom: 1px solid rgba(0, 0, 0,.2);
+    }
+    main .dropdownMenu  nav ul li.sub-menu:before{
+        line-height: 45px;
+    }
+    main .dropdownMenu  nav ul li.active ul{
+        display:block;
+        position:relative;
+        left: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+    main .dropdownMenu nav ul li ul{
+        left: -200%;
     }
  }
  @media(max-width:992px){
@@ -179,7 +356,32 @@
        background-color: black;
        background-image: none;
    }
+   .container-menu .main-menu2 ul .image{
+    position: relative;
+    width:100%;
+    max-width: 120px;
+    height:auto;
 }
-
-
- 
+.container-menu .main-menu2 ul .banner{
+    position: absolute;
+    width: 100%;
+    max-width: 20px;
+    height: auto;
+    left: 75%;
+}
+}
+@media(max-width:360px){
+    .container-menu .main-menu2 ul .image{
+        position: relative;
+        width:100%;
+        max-width: 70px;
+        height:auto;
+    }
+    .container-menu .main-menu2 ul .banner{
+        position: absolute;
+        width: 100%;
+        max-width: 10px;
+        height: auto;
+        left: 75%;
+    }
+}
